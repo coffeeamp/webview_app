@@ -16,8 +16,8 @@ class _HomeScreenState extends State<HomeScreen> {
   void initState() {
     super.initState();
     controller = WebViewController()
-      ..setJavaScriptMode(JavaScriptMode.unrestricted)
-      ..setBackgroundColor(const Color(0x00000000))
+      ..setJavaScriptMode(JavaScriptMode.unrestricted) // 자바스크립트 허용, unrestricted: 제한없음
+      ..setBackgroundColor(const Color(0x00000000)) // 배경색 투명
       // ..setNavigationDelegate(
       //   NavigationDelegate(
       //     onProgress: (int progress) {
@@ -34,7 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
       //     },
       //   ),
       // )
-      ..loadRequest(Uri.parse(homeUrl));
+      ..loadRequest(Uri.parse(homeUrl)); // 초기화면 설정
   }
 
   @override
