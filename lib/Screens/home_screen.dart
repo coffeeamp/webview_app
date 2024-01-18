@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:webview_app/Screens/webview_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -11,8 +12,28 @@ class HomeScreen extends StatelessWidget {
         title: Text('home_screen', style: TextStyle(color: Colors.white)),
         centerTitle: true,
       ),
-      body: Center(
-        child: Text('home_screen'),
+      body: Padding(
+        padding: EdgeInsets.fromLTRB(10, 50, 10, 10),
+        child: GridView.count(
+          crossAxisCount: 2,
+          mainAxisSpacing: 10,
+          crossAxisSpacing: 10.0,
+
+          children: [
+            ElevatedButton(
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => WebviewScreen()));
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.orange,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+               child: Text('webview_screen', style: TextStyle(color: Colors.white)),
+            ),
+          ],
+        )
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: 0,
