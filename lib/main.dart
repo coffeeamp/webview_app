@@ -8,7 +8,7 @@ void main(){
 
   runApp( // 원래라면 이 위치에서 7번줄을 자동실행
     MaterialApp(
-      home : HomeScreen(),
+      home : WebviewScreen(),
     ),
   );
 }

@@ -3,14 +3,14 @@ import 'package:webview_flutter/webview_flutter.dart';
 
 const homeUrl = 'https://www.google.co.kr/?hl=ko';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class WebviewScreen extends StatefulWidget {
+  const WebviewScreen({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<WebviewScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeScreenState extends State<WebviewScreen> {
   late WebViewController controller;
   @override
   void initState() {
