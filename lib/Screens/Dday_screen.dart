@@ -15,54 +15,90 @@ class _DdayScreenState extends State<DdayScreen> {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 90, 145, 247),
       body: Padding(
-        padding: EdgeInsets.fromLTRB(10, 70, 10, 10),
+        padding: EdgeInsets.fromLTRB(10, 70, 10, 0),
         child: SizedBox(
           width: MediaQuery.of(context).size.width,
           child: Column(
             children: [
-              Text(
-                'Social-Agent',
-                style: TextStyle(
-                  fontSize: 60,
-                  fontFamily: 'Parisienne',
-                  color: Colors.white,
-                ),
-              ),
-              Text(
-                '소집일',
-                style: TextStyle(
-                  fontSize: 30,
-                  fontFamily: 'sunflower',
-                  color: Colors.white,
-                ),
-              ),
-              Text(
-                '2022.09.26',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontFamily: 'sunflower',
-                  color: Colors.white,
-                ),
-              ),
-              IconButton(
-                onPressed: (){},
-                icon: Icon(
-                  Icons.support_agent,
-                  ),
-                ),
-              Text(
-                'D+1',
-                style: TextStyle(
-                  fontSize: 50,
-                  fontWeight: FontWeight.w700,
-                  fontFamily: 'sunflower',
-                  color: Colors.white,
-                ),
-              ),
+              _TopPart(),
+              _BottomPart(),
             ],
-          ),
+          )
         ),
       )
+    );
+  }
+}
+
+class _TopPart extends StatelessWidget {
+  const _TopPart({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Text(
+                  'Social-Agent',
+                  style: TextStyle(
+                    fontSize: 60,
+                    fontFamily: 'Parisienne',
+                    color: Colors.white,
+                  ),
+                ),
+                Column(
+                  children: [
+                    Text(
+                  '소집일',
+                  style: TextStyle(
+                    fontSize: 30,
+                    fontFamily: 'sunflower',
+                    color: Colors.white,
+                  ),
+                ),
+                Text(
+                  '2022.09.26',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontFamily: 'sunflower',
+                    color: Colors.white,
+                  ),
+                ),
+                  ],
+                ),
+                IconButton(
+                  iconSize: 60,
+                  onPressed: (){},
+                  icon: Icon(
+                    Icons.support_agent,
+                    color: Colors.blue[900],
+                    ),
+                  ),
+                Text(
+                  'D+1',
+                  style: TextStyle(
+                    fontSize: 50,
+                    fontWeight: FontWeight.w700,
+                    fontFamily: 'sunflower',
+                    color: Colors.white,
+                  ),
+                ),
+              ],
+            ),
+    );
+  }
+}
+
+class _BottomPart extends StatelessWidget {
+  const _BottomPart({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: Image.asset(
+                  'asset/img/middle_image.png'
+                ),
     );
   }
 }
