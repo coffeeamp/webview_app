@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:webview_app/Screens/Dday_screen.dart';
 import 'package:webview_app/Screens/webview_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -31,6 +32,18 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
                child: Text('webview_screen', style: TextStyle(color: Colors.white)),
+            ),
+            ElevatedButton(
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => DdayScreen()));
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.orange,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+               child: Text('D-day_screen', style: TextStyle(color: Colors.white)),
             ),
           ],
         )

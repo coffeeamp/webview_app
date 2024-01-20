@@ -55,6 +55,23 @@ class _WebviewScreenState extends State<WebviewScreen> {
       ),
       body: WebViewWidget(
         controller: controller),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: 0,
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.search),
+            label: 'search',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'person',
+          ),
+        ],
+      ),
     );
   }
 }
