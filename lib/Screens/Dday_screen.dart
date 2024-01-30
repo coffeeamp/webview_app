@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:webview_app/Screens/Dday_screen.dart';
 import 'package:webview_app/Screens/home_screen.dart';
@@ -69,7 +70,22 @@ class _TopPart extends StatelessWidget {
                 ),
                 IconButton(
                   iconSize: 60,
-                  onPressed: (){},
+                  onPressed: (){
+                    // dialog
+                    showCupertinoDialog(
+                      context: context,
+                      barrierDismissible: true,
+                      builder: (BuildContext context) {
+                        return Align( // 정렬위젯
+                          alignment: Alignment.bottomCenter, // 아래쪽 중앙정렬
+                          child: Container(
+                              color: Colors.white,
+                              height: 300,
+                          ),
+                        );
+                      },
+                    );
+                  },
                   icon: Icon(
                     Icons.support_agent,
                     color: Colors.blue[900],
@@ -77,6 +93,7 @@ class _TopPart extends StatelessWidget {
                   ),
                 Text(
                   'D+1',
+                  
                   style: TextStyle(
                     fontSize: 50,
                     fontWeight: FontWeight.w700,
