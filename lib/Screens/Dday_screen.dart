@@ -83,8 +83,8 @@ class _TopPart extends StatelessWidget {
                               height: 300,
                               child: CupertinoDatePicker(
                                 mode: CupertinoDatePickerMode.date, //  날짜만 보면 됨
-                                onDateTimeChanged: (DateTime data) {
-                                  
+                                onDateTimeChanged: (DateTime date) {
+                                  print(date);
                                 },
                               ),
                           ),
