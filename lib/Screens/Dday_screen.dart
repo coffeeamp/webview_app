@@ -31,9 +31,14 @@ class _DdayScreenState extends State<DdayScreen> {
   }
 }
 
-class _TopPart extends StatelessWidget {
-  const _TopPart({super.key});
+class _TopPart extends StatefulWidget {
+   _TopPart({super.key});
+  DateTime selectedDate = DateTime.now();
+  @override
+  State<_TopPart> createState() => _TopPartState();
+}
 
+class _TopPartState extends State<_TopPart> {
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -59,7 +64,7 @@ class _TopPart extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  '2022.09.26',
+                  '${selectedDate.year}.${selectedDate.month}.${selectedDate.day}',
                   style: TextStyle(
                     fontSize: 20,
                     fontFamily: 'sunflower',
@@ -84,7 +89,9 @@ class _TopPart extends StatelessWidget {
                               child: CupertinoDatePicker(
                                 mode: CupertinoDatePickerMode.date, //  날짜만 보면 됨
                                 onDateTimeChanged: (DateTime date) {
-                                  print(date);
+                                  setState(() {
+                                    widget.selectedDate = date;
+                                  });
                                 },
                               ),
                           ),
