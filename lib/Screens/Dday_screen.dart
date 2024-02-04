@@ -64,7 +64,7 @@ class _TopPartState extends State<_TopPart> {
                   ),
                 ),
                 Text(
-                  '${selectedDate.year}.${selectedDate.month}.${selectedDate.day}',
+                  '${widget.selectedDate.year}.${widget.selectedDate.month}.${widget.selectedDate.day}',
                   style: TextStyle(
                     fontSize: 20,
                     fontFamily: 'sunflower',
@@ -88,6 +88,7 @@ class _TopPartState extends State<_TopPart> {
                               height: 300,
                               child: CupertinoDatePicker(
                                 mode: CupertinoDatePickerMode.date, //  날짜만 보면 됨
+                                maximumDate: DateTime.now().add(Duration(days: 365)), // 최대날짜
                                 onDateTimeChanged: (DateTime date) {
                                   setState(() {
                                     widget.selectedDate = date;
@@ -105,7 +106,7 @@ class _TopPartState extends State<_TopPart> {
                     ),
                   ),
                 Text(
-                  'D+1',
+                  'D+${DateTime.now().difference(widget.selectedDate).inDays + 1}', // D-day 계산
                   
                   style: TextStyle(
                     fontSize: 50,
