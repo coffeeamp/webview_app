@@ -40,6 +40,9 @@ dependencies:
   webview_flutter_android: ^3.13.2
   webview_flutter_wkwebview: ^3.10.1
 
+  google_maps_flutter: ^2.0.9
+  geolocation: ^3.0.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
