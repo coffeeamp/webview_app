@@ -16,6 +16,7 @@ class _WebviewScreenState extends State<WebviewScreen> {
   void initState() {
     super.initState();
     controller = WebViewController()
+    
       ..setJavaScriptMode(JavaScriptMode.unrestricted) // 자바스크립트 허용, unrestricted: 제한없음
       ..setBackgroundColor(const Color(0x00000000)) // 배경색 투명
       // ..setNavigationDelegate(
