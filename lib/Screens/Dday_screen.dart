@@ -1,7 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:webview_app/Screens/Dday_screen.dart';
-import 'package:webview_app/Screens/home_screen.dart';
 
 class DdayScreen extends StatefulWidget {
   const DdayScreen({super.key});
@@ -32,7 +30,7 @@ class _DdayScreenState extends State<DdayScreen> {
 }
 
 class _TopPart extends StatefulWidget {
-   _TopPart({super.key});
+   _TopPart();
   DateTime selectedDate = DateTime.now();
   @override
   State<_TopPart> createState() => _TopPartState();
@@ -122,7 +120,7 @@ class _TopPartState extends State<_TopPart> {
 }
 
 class _BottomPart extends StatelessWidget {
-  const _BottomPart({super.key});
+  const _BottomPart();
 
   @override
   Widget build(BuildContext context) {
