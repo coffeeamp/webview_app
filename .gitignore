@@ -44,3 +44,12 @@ app.*.map.json
 
 
 apikey.js
+
+
+local.properties
+.project
+project.properties
+secure.properties
+.DS_Store
+
+android/app/src/main/AndroidManifest.xml
